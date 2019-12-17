@@ -1,6 +1,7 @@
 class MaxCapacity(object):
 
-    def maxArea(self, container) -> int:
+    @staticmethod
+    def max_area(container) -> int:
         head_point = 0
         end_point = len(container)-1
         max_area = 0
@@ -18,3 +19,9 @@ class MaxCapacity(object):
                 head_point += 1
             area_lenth = end_point - head_point
         return max_area
+
+
+test_case = [[1, 2, 3, 4, 5], [1, 8, 13, 4, 9], [0, 0, 0, 0], [1, 1]]
+test = MaxCapacity()
+for i in test_case:
+    print(test.max_area(i))
