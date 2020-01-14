@@ -24,16 +24,17 @@ class LongestPalindromicString(object):
                     if length < len(or_string[index - half_len:index + half_len + 1:]):
                         length = len(or_string[index - half_len:index + half_len + 1:])
                         longest_palindromic_string = or_string[index - half_len:index + half_len + 1:]
-                elif LongestPalindromicString.is_palindromic_string(or_string[index-half_len-1:index+half_len+1:]):
-                    if length < len(or_string[index - half_len - 1:index + half_len + 1:]):
-                        length = len(or_string[index - half_len - 1:index + half_len + 1:])
-                        longest_palindromic_string = or_string[index - half_len - 1:index + half_len + 1:]
+                elif LongestPalindromicString.is_palindromic_string(or_string[index-half_len:index+half_len:]):
+                    if length < len(or_string[index - half_len:index + half_len:]):
+                        length = len(or_string[index - half_len:index + half_len:])
+                        longest_palindromic_string = or_string[index - half_len:index + half_len:]
                 else:
                     break
 
         return longest_palindromic_string
 
 
-test_suite = ['', 'ab123321ddddadc', 'adb12321aaa']
+test_suite = ['aa123', '', 'abcdd', 'aaaaa', 'abcddd']
 for test_case in test_suite:
     print(LongestPalindromicString.get_sub_string(test_case))
+
