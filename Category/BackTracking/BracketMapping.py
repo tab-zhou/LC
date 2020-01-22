@@ -1,5 +1,7 @@
-# 题目： 给出n对括号，求括号排列的所有可能性
-# 思路： 主要是尝试使用回溯法
+"""
+题目： 给出n对括号，求括号排列的所有可能性
+思路： 主要是尝试使用回溯法
+"""
 
 
 class BracketMapping(object):
@@ -15,6 +17,6 @@ class BracketMapping(object):
             BracketMapping.mapping(sub_result + '(', result, left_count-1, right_count)
 
 
-testsuite = [3, 4]
-for testcase in testsuite:
-    print(BracketMapping.mapping('', [], testcase, testcase))
+test_suite = [2]
+for test_case in test_suite:
+    print(BracketMapping.mapping('', [], test_case, test_case))
