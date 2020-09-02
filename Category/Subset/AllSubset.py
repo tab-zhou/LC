@@ -5,6 +5,7 @@
 
 """
 
+
 class AllSubset(object):
 
     @staticmethod
