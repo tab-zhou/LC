@@ -9,13 +9,13 @@ Example:
     Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
     Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 Solution:
-    Method 1: traverse list for each element and the element after it, compare them and calculate the max different
-    value. Algorithm Complexity: O(N * logN)
-        for index_buy_day in range(0, max_day - 1):
-            for index_sell_day in range(index_buy_day + 1, max_day):
-                ...
-    Method 2:
-
+    Method 1:   traverse list for each element and the element after it, compare them and calculate the max different
+                value. Algorithm Complexity: O(N * logN)
+                for index_buy_day in range(0, max_day - 1):
+                     for index_sell_day in range(index_buy_day + 1, max_day):
+                        ...
+    Method 2:   no need compare non-minimum element with current index, so store minimum element, calculate different
+                value between current element and minimum.
 """
 
 
